@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання готелю</title>
+</head>
+<body>
+
+    <h1>Форма бронювання номера в готелі</h1>
+
+    <form action="#" method="post">
+        
+        <!-- Текстові поля та контакти -->
+        <p>
+            <label for="fullname">Ім'я та прізвище:*</label><br>
+            <input type="text" id="fullname" name="fullname" required placeholder="Шевченко Тарас">
+        </p>
+
+        <p>
+            <label for="email">Електронна пошта:*</label><br>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com">
+        </p>
+
+        <p>
+            <label for="phone">Номер телефону:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX">
+        </p>
+
+        <p>
+            <label for="checkin">Дата заїзду:*</label><br>
+            <input type="date" id="checkin" name="checkin" required>
+        </p>
+
+        <p>
+            <label for="checkout">Дата виїзду:*</label><br>
+            <input type="date" id="checkout" name="checkout" required>
+        </p>
+
+        <!-- Поле з обмеженням на введення чисел -->
+        <p>
+            <label for="guests">Кількість гостей (від 1 до 6):*</label><br>
+            <input type="number" id="guests" name="guests" min="1" max="6" value="1" required>
+        </p>
+
+        <!-- Вибір одного варіанта (Radio Buttons) -->
+        <fieldset>
+            <legend>Тип номера:*</legend>
+            <input type="radio" id="standard" name="room_type" value="standard" required>
+            <label for="standard">Стандарт</label><br>
+            
+            <input type="radio" id="junior_suite" name="room_type" value="junior_suite">
+            <label for="junior_suite">Напівлюкс</label><br>
+            
+            <input type="radio" id="suite" name="room_type" value="suite">
+            <label for="suite">Люкс</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Можливість вибору декількох варіантів (Checkboxes) -->
+        <fieldset>
+            <legend>Додаткові послуги:</legend>
+            <input type="checkbox" id="breakfast" name="services" value="breakfast">
+            <label for="breakfast">Сніданок</label><br>
+            
+            <input type="checkbox" id="parking" name="services" value="parking">
+            <label for="parking">Паркінг</label><br>
+            
+            <input type="checkbox" id="transfer" name="services" value="transfer">
+            <label for="transfer">Трансфер</label><br>
+            
+            <input type="checkbox" id="cleaning" name="services" value="cleaning">
+            <label for="cleaning">Додаткове прибирання</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Випадаючий список -->
+        <p>
+            <label for="city">Місто готелю:</label><br>
+            <select id="city" name="city">
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odesa">Одеса</option>
+                <option value="uzhhorod">Ужгород</option>
+                <option value="chernivtsi">Чернівці</option>
+            </select>
+        </p>
+
+        <!-- Велике текстове поле з обмеженням символів -->
+        <p>
+            <label for="wishes">Додаткові побажання (макс. 250 символів):</label><br>
+            <textarea id="wishes" name="wishes" maxlength="250" rows="4" cols="40" placeholder="Ваші побажання..."></textarea>
+        </p>
+
+        <!-- Кнопки відправлення та очищення -->
+        <p>
+            <button type="submit">Забронювати</button>
+            <button type="reset">Очистити форму</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
