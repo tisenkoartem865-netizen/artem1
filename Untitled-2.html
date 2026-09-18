@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог товарів</title>
+</head>
+<body>
+
+  <!-- border="1" створює просту рамку без складного CSS -->
+  <table border="1" cellpadding="8" cellspacing="0">
+    <caption><b>Каталог комп'ютерної техніки</b></caption>
+    
+    <thead>
+      <tr>
+        <th rowspan="2">Категорія</th>
+        <th colspan="2">Інформація про товар</th>
+        <th rowspan="2">Ціна</th>
+        <th rowspan="2">Наявність</th>
+      </tr>
+      <tr>
+        <th>Назва товару</th>
+        <th>Виробник</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <!-- Об'єднуємо 2 рядки для однієї категорії -->
+        <td rowspan="2">Ноутбук</td>
+        <td>Legion 5</td>
+        <td>Lenovo</td>
+        <td>45 000 грн</td>
+        <td>Є в наявності</td>
+      </tr>
+      <tr>
+        <td>MacBook Air</td>
+        <td>Apple</td>
+        <td>52 000 грн</td>
+        <td>Є в наявності</td>
+      </tr>
+      <tr>
+        <td>Клавіатура</td>
+        <td>G213</td>
+        <td>Logitech</td>
+        <td>2 300 грн</td>
+        <td>Немає</td>
+      </tr>
+      <tr>
+        <td>Миша</td>
+        <td>DeathAdder</td>
+        <td>Razer</td>
+        <td>1 200 грн</td>
+        <td>Є в наявності</td>
+      </tr>
+      <tr>
+        <td>Монітор</td>
+        <td>UltraGear</td>
+        <td>LG</td>
+        <td>11 500 грн</td>
+        <td>Є в наявності</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <!-- Об'єднуємо всі 5 стовпців для підсумку -->
+        <td colspan="5"><b>Всього товарів: 5</b></td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>
+
