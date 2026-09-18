@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мій сайт</title>
+</head>
+<body>
+
+  <header>
+    <h1>Вітаємо на сайті</h1>
+    <nav>
+      <a href="index.html">Головна сторінка</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Про нас</h2>
+      <img src="logo.png" alt="Логотип компанії">
+      <p>Ми створюємо зручні та доступні веб-сайти для кожного.</p>
+    </section>
+
+    <section>
+      <h2>Зворотний зв'язок</h2>
+      <form>
+        <div>
+          <label for="username">Ваше ім'я:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
