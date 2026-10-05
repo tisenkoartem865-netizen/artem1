@@ -3,50 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Навчальний центр</title>
+    <title>Практична робота: Позиціонування в CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Навчальний центр</h1>
+    <!-- Завдання 6 та 7: Sticky Меню із z-index -->
+    <nav class="menu">
+        <a href="#">Головна</a>
+        <a href="#">Товари</a>
+        <a href="#">Контакти</a>
+    </nav>
 
-        <nav>
-            <a href="#">Головна</a>
-            <a href="#">Курси</a>
-            <a href="#">Контакти</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Наші курси</h2>
-
-        <section class="courses">
-
-            <div class="course-card">
-                <h3>Основи HTML</h3>
-                <p>Вивчення структури вебсторінок та основних HTML-тегів.</p>
-                <p class="duration">Тривалість: 4 тижні</p>
-            </div>
-
-            <div class="course-card">
-                <h3>Основи CSS</h3>
-                <p>Оформлення та стилізація вебсторінок.</p>
-                <p class="duration">Тривалість: 5 тижнів</p>
-            </div>
-
-            <div class="course-card">
-                <h3>Основи JavaScript</h3>
-                <p>Створення інтерактивних вебсторінок.</p>
-                <p class="duration">Тривалість: 8 тижнів</p>
-            </div>
-
-        </section>
-
-        <div id="important">
-            <strong>Важливо!</strong> Реєстрація на курси вже розпочалася.
+    <!-- Завдання з відносним позиціонуванням (relative-box) -->
+    <section>
+        <h2>Завдання: Відносне позиціонування</h2>
+        <div class="relative-box">
+            Блок з відносним позиціонуванням (relative-box)
         </div>
-    </main>
+    </section>
+
+    <!-- Завдання 3 та 5: Картки товарів (relative + absolute) -->
+    <section>
+        <h2>Завдання 3. Картки товарів</h2>
+        <div class="products-container">
+            <!-- Картка 1: Ноутбук -->
+            <div class="product">
+                <span class="discount">-20%</span>
+                <h2>Ноутбук</h2>
+                <p>Ноутбук для навчання та роботи.</p>
+                <p class="price">25 000 грн</p>
+            </div>
+
+            <!-- Картка 2: Смартфон -->
+            <div class="product">
+                <span class="discount">-15%</span>
+                <h2>Смартфон</h2>
+                <p>Потужний смартфон з якісною камерою.</p>
+                <p class="price">15 000 грн</p>
+            </div>
+
+            <!-- Картка 3: Навушники -->
+            <div class="product">
+                <span class="discount">-10%</span>
+                <h2>Навушники</h2>
+                <p>Бездротові навушники для музики та дзвінків.</p>
+                <p class="price">3 500 грн</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Завдання 4: Кнопка поверх зображення -->
+    <section>
+        <h2>Завдання 4. Кнопка поверх зображення</h2>
+        <div class="banner">
+            <img src="https://via.placeholder.com/500x200" alt="Реклама">
+            <button class="banner-button">Детальніше</button>
+        </div>
+    </section>
+
+    <!-- Завдання 8: Накладання двох елементів (z-index) -->
+    <section>
+        <h2>Завдання 8. Накладання двох елементів</h2>
+        <div class="layers">
+            <div class="box1">Блок 1</div>
+            <div class="box2">Блок 2</div>
+        </div>
+    </section>
+
+    <!-- Додатковий текст для створення прокручування (для перевірки position: sticky) -->
+    <section class="extra-content">
+        <p>Додатковий текст сторінки для перевірки прокрутки...</p>
+        <p>Додатковий текст сторінки...</p>
+        <p>Додатковий текст сторінки...</p>
+        <p>Додатковий текст сторінки...</p>
+        <p>Додатковий текст сторінки...</p>
+    </section>
+
+    <!-- Завдання 5: Фіксована кнопка (position: fixed) -->
+    <button class="help">Допомога</button>
 
 </body>
 </html>
