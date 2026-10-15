@@ -1,141 +1,143 @@
- /* Загальні стилі для сторінки */
+ /* Загальні стилі */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-section {
     padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
 }
 
-/* 1. Відносне позиціонування */
-.relative-box {
-    position: relative;
-    top: 20px;
-    left: 40px;
-    border: 2px solid blue;
+header {
+    background: #fff;
     padding: 20px;
-    margin: 20px;
-}
-
-/* 2. Завдання 3 та 5: Картки товарів */
-.products-container {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.product {
-    position: relative;
-    width: 300px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    box-sizing: border-box;
+.logo {
+    margin: 0;
+    color: #2c3e50;
 }
 
-.discount {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: red;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* 3. Завдання 4: Баннер з кнопкою */
-.banner {
-    position: relative;
-    width: 500px;
-    margin: 20px 0;
-}
-
-.banner img {
-    width: 100%;
-    display: block;
-}
-
-.banner-button {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* 4. Завдання 5: Фіксована кнопка "Допомога" */
-.help {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* 5. Завдання 6 та 7: Навігаційне меню (sticky + z-index) */
+/* Меню через Flexbox */
 .menu {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    padding: 20px;
-    border-bottom: 2px solid #ddd;
-    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu a {
-    margin-right: 15px;
     text-decoration: none;
-    color: #333;
+    color: #2980b9;
     font-weight: bold;
 }
 
-/* 6. Завдання 8: Накладання двох елементів */
-.layers {
-    position: relative;
-    height: 250px;
+.menu a:hover {
+    color: #1abc9c;
 }
 
-.box1 {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 150px;
-    height: 100px;
-    background-color: lightcoral;
-    z-index: 1;
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 10px;
+}
+
+/* Курси через CSS Grid (адаптивна сітка) */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.course-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.box2 {
-    position: absolute;
-    top: 70px;
-    left: 100px;
-    width: 150px;
-    height: 100px;
-    background-color: lightblue;
-    z-index: 2;
+.course-card h3 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+.description {
+    color: #7f8c8d;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+/* Нижня частина картки курсу через Flexbox */
+.course-bottom {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    margin-top: 15px;
 }
 
-/* Стилі для додаткового вмісту, щоб сторінка мала можливість прокрутки */
-.extra-content p {
-    margin-bottom: 150px;
+.course-bottom span {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.course-bottom button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.course-bottom button:hover {
+    background: #2980b9;
+}
+
+/* Блок «Наші переваги» через CSS Grid (4 колонки) */
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.advantage-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.advantage-item h3 {
+    color: #27ae60;
+    margin-top: 0;
+}
+
+/* Адаптивність для менших екранів */
+@media (max-width: 768px) {
+    .advantages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
