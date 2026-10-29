@@ -3,106 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Academy - Навчальний центр</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SoundWave — Навушники</title>
+    <link rel="stylesheet" href="style-scss.css">
 </head>
 <body>
-    <!-- Назва навчального центру та меню -->
-    <header>
-        <h1 class="logo">Web Academy</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="#courses">Курси</a></li>
-                <li><a href="#advantages">Переваги</a></li>
-                <li><a href="#contacts">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Блок «Наші курси» -->
-        <section id="courses">
-            <h2>Наші курси</h2>
-            <div class="courses">
-                <!-- Картка 1 -->
-                <div class="course-card">
-                    <h3>HTML</h3>
-                    <p class="description">Основи мови розмітки гіпертексту для створення структури вебсторінок.</p>
-                    <div class="course-bottom">
-                        <span>4 тижні</span>
-                        <button>Записатися</button>
-                    </div>
-                </div>
-                <!-- Картка 2 -->
-                <div class="course-card">
-                    <h3>CSS</h3>
-                    <p class="description">Стилізація вебсторінок, робота з макетами, адаптивність та дизайн.</p>
-                    <div class="course-bottom">
-                        <span>4 тижні</span>
-                        <button>Записатися</button>
-                    </div>
-                </div>
-                <!-- Картка 3 -->
-                <div class="course-card">
-                    <h3>JavaScript</h3>
-                    <p class="description">Програмування для веб, інтерактивність та робота з динамічним контентом.</p>
-                    <div class="course-bottom">
-                        <span>8 тижнів</span>
-                        <button>Записатися</button>
-                    </div>
-                </div>
-                <!-- Картка 4 -->
-                <div class="course-card">
-                    <h3>React</h3>
-                    <p class="description">Сучасна бібліотека для створення складних компонентних інтерфейсів.</p>
-                    <div class="course-bottom">
-                        <span>6 тижнів</span>
-                        <button>Записатися</button>
-                    </div>
-                </div>
-                <!-- Картка 5 -->
-                <div class="course-card">
-                    <h3>Next.js</h3>
-                    <p class="description">React-фреймворк для серверного рендерингу та оптимізації вебзастосунків.</p>
-                    <div class="course-bottom">
-                        <span>5 тижнів</span>
-                        <button>Записатися</button>
-                    </div>
-                </div>
-                <!-- Картка 6 -->
-                <div class="course-card">
-                    <h3>PHP</h3>
-                    <p class="description">Серверна розробка, робота з базами даних та створення динамічних сайтів.</p>
-                    <div class="course-bottom">
-                        <span>7 тижнів</span>
-                        <button>Записатися</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+<header class="site-header">
+    <a href="#" class="logo">Sound<span>Wave</span></a>
 
-        <!-- Блок «Наші переваги» -->
-        <section id="advantages">
-            <h2>Наші переваги</h2>
-            <div class="advantages">
-                <div class="advantage-item">
-                    <h3>Практичні заняття</h3>
-                    <p>Мінімум теорії, максимум реального коду та проєктів.</p>
-                </div>
-                <div class="advantage-item">
-                    <h3>Сучасні технології</h3>
-                    <p>Навчання за актуальними стандартами IT-індустрії.</p>
-                </div>
-                <div class="advantage-item">
-                    <h3>Підтримка викладача</h3>
-                    <p>Зворотний зв'язок та допомога на кожному етапі.</p>
-                </div>
-                <div class="advantage-item">
-                    <h3>Сертифікат</h3>
-                    <p>Документ про успішне завершення курсів.</p>
-                </div>
+    <nav class="menu">
+        <a href="#features">Переваги</a>
+        <a href="#about">Про продукт</a>
+        <a href="#order">Замовити</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <p class="eyebrow">НОВЕ ПОКОЛІННЯ ЗВУКУ</p>
+            <h1>Твоя музика.<br><span>Твій ритм.</span></h1>
+
+            <p class="hero-text">
+                Бездротові навушники SoundWave —
+                чистий звук, комфорт і свобода руху.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#order" class="button button-primary">Замовити</a>
+                <a href="#features" class="button button-secondary">
+                    Дізнатися більше
+                </a>
             </div>
-        </section>
-    </main>
+
+            <p class="price">2 499 грн</p>
+        </div>
+
+        <div class="product-art">
+            <div class="glow"></div>
+            <div class="headphone headphone-left">
+                <div class="ear-cup"></div>
+            </div>
+            <div class="headphone headphone-right">
+                <div class="ear-cup"></div>
+            </div>
+            <div class="product-caption">SOUNDWAVE PRO</div>
+        </div>
+    </section>
+
+    <section class="section features" id="features">
+        <p class="eyebrow">СТВОРЕНІ ДЛЯ ТЕБЕ</p>
+        <h2>Звук, який надихає</h2>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-icon">♫</div>
+                <h3>Чистий звук</h3>
+                <p>Насичені баси та чітке звучання музики.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">⌁</div>
+                <h3>До 30 годин</h3>
+                <p>Слухай музику довше завдяки акумулятору.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">◉</div>
+                <h3>Комфорт</h3>
+                <p>Легка конструкція для щоденного використання.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section order" id="order">
+        <div>
+            <p class="eyebrow">ТВІЙ НОВИЙ РІВЕНЬ ЗВУКУ</p>
+            <h2>SoundWave Pro чекають на тебе</h2>
+            <p>Обирай якісний звук для навчання та відпочинку.</p>
+        </div>
+
+        <a class="button button-light" href="mailto:order@example.com">
+            Замовити зараз
+        </a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <a href="#" class="logo">Sound<span>Wave</span></a>
+    <p>© 2026 SoundWave. Навчальний проєкт.</p>
+</footer>
+
 </body>
 </html>
