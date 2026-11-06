@@ -1,0 +1,127 @@
+:root {
+  --primary-color: #0066cc;
+  --text-color: #333333;
+  --text-muted: #666666;
+  --bg-color: #f4f4f9;
+  --card-bg: #ffffff;
+  --border-color: #dddddd;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --border-radius: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Шапка та навігація */
+.header {
+  background-color: var(--primary-color);
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* Основний контент */
+.main-content {
+  max-width: 900px;
+  margin: var(--spacing-md) auto;
+  padding: 0 15px;
+}
+
+.main-title {
+  font-size: 28px;
+  margin-bottom: var(--spacing-md);
+}
+
+.posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* БЕМ Компонент: post-card */
+.post-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+}
+
+/* БЕМ Модифікатор */
+.post-card--featured {
+  border: 2px solid var(--primary-color);
+}
+
+/* Елементи БЕМ */
+.post-card__title {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.post-card__excerpt {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.post-card__link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-card__link:hover {
+  text-decoration: underline
+}
+
+/* Адаптивність для смартфонів (до 600px) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-title {
+    font-size: 22px;
+  }
+
+  .post-card {
+    padding: 15px;
+  }
+} 

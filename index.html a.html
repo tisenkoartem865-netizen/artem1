@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Особистий блог</title>
+  <!-- Для перевірки спочатку підключаємо before.css, а після оптимізації — after.css або after.min.css -->
+  <link rel="stylesheet" href="after.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__logo">МійБлог</div>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link nav__link--active">Головна</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Статті</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Про мене</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h1 class="main-title">Останні публікації</h1>
+
+    <div class="posts-grid">
+
+      <!-- Картка статті 1 -->
+      <article class="post-card">
+        <h2 class="post-card__title">Основи сучасного CSS</h2>
+        <p class="post-card__excerpt">
+          Дізнайтеся, як використовувати CSS-змінні та сучасні методології для покращення вашого коду.
+        </p>
+        <a href="#" class="post-card__link">Читати далі →</a>
+      </article>
+
+      <!-- Картка статті 2 (із модифікатором акцентної статті) -->
+      <article class="post-card post-card--featured">
+        <h2 class="post-card__title">Методологія БЕМ на практиці</h2>
+        <p class="post-card__excerpt">
+          Детальний розбір того, як правильно називати класи за правилами БЕМ та уникати хаосу в стилях.
+        </p>
+        <a href="#" class="post-card__link">Читати далі →</a>
+      </article>
+
+      <!-- Картка статті 3 -->
+      <article class="post-card">
+        <h2 class="post-card__title">Оптимізація та мінімізація</h2>
+        <p class="post-card__excerpt">
+          Чому важливо зменшувати розмір CSS-файлів перед публікацією сайту в мережу.
+        </p>
+        <a href="#" class="post-card__link">Читати далі →</a>
+      </article>
+
+    </div>
+  </main>
+
+</body>
+</html>
