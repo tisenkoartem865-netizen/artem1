@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <!-- Мета-тег viewport для правильного відображення на мобільних пристроях -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна навчальна платформа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сторінки -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">EduPlatform</div>
+            <!-- Навігація на Flexbox -->
+            <nav class="main-nav">
+                <a href="#">Головна</a>
+                <a href="#">Курси</a>
+                <a href="#">Про нас</a>
+                <a href="#">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Головний вміст -->
+    <main class="container">
+        <!-- Заголовок та короткий опис платформи -->
+        <section class="intro-section">
+            <h1>Каталог онлайн-курсів</h1>
+            <p>Обирайте актуальні IT-курси та навчайтеся у провідних фахівців. Змініть свою кар'єру вже сьогодні!</p>
+        </section>
+
+        <!-- Меню категорій на Flexbox -->
+        <div class="categories-nav">
+            <button class="cat-btn active">Усі</button>
+            <button class="cat-btn">Програмування</button>
+            <button class="cat-btn">Дизайн</button>
+            <button class="cat-btn">Маркетинг</button>
+        </div>
+
+        <!-- Каталог курсів (CSS Grid: 3 колонки на ПК, 2 на планшеті, 1 на смартфоні) -->
+        <section class="courses-grid">
+            <!-- Картка 1 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/250?random=1" alt="Курс HTML та CSS">
+                <div class="card-content">
+                    <h3>Основи HTML та CSS</h3>
+                    <p class="course-desc">Створюйте сучасні та адаптивні вебсторінки з нуля.</p>
+                    <div class="card-footer">
+                        <span class="duration">⏱ 4 тижні</span>
+                        <a href="#" class="details-btn">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Картка 2 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/250?random=2" alt="Курс JavaScript">
+                <div class="card-content">
+                    <h3>JavaScript для початківців</h3>
+                    <p class="course-desc">Опануйте базовий синтаксис та логіку мови програмування.</p>
+                    <div class="card-footer">
+                        <span class="duration">⏱ 6 тижнів</span>
+                        <a href="#" class="details-btn">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Картка 3 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/250?random=3" alt="Курс UI/UX Дизайн">
+                <div class="card-content">
+                    <h3>UI/UX Дизайн</h3>
+                    <p class="course-desc">Навчіться проєктувати зручні інтерфейси та створювати прототипи.</p>
+                    <div class="card-footer">
+                        <span class="duration">⏱ 5 тижнів</span>
+                        <a href="#" class="details-btn">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Картка 4 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/250?random=4" alt="Курс Python">
+                <div class="card-content">
+                    <h3>Python Розробка</h3>
+                    <p class="course-desc">Вивчіть універсальну мову для бекенду, аналізу даних та AI.</p>
+                    <div class="card-footer">
+                        <span class="duration">⏱ 8 тижнів</span>
+                        <a href="#" class="details-btn">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Картка 5 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/250?random=5" alt="Курс React">
+                <div class="card-content">
+                    <h3>Фреймворк React</h3>
+                    <p class="course-desc">Створюйте динамічні та швидкі односторінкові додатки (SPA).</p>
+                    <div class="card-footer">
+                        <span class="duration">⏱ 6 тижнів</span>
+                        <a href="#" class="details-btn">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Картка 6 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/250?random=6" alt="Курс Digital Marketing">
+                <div class="course-desc">
+                    <h3>Digital Marketing</h3>
+                    <p class="course-desc">Стратегії просування продуктів в інтернет-середовищі.</p>
+                    <div class="card-footer">
+                        <span class="duration">⏱ 4 тижні</span>
+                        <a href="#" class="details-btn">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
