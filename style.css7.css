@@ -1,0 +1,181 @@
+ /* Загальні налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #333;
+}
+
+/* Основний макет */
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Верхня панель */
+.header {
+    grid-area: header;
+    background: #243b64;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header__user {
+    background: #2563eb;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* Бічне меню */
+.sidebar {
+    grid-area: sidebar;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #243b64;
+}
+
+.sidebar__nav {
+    display: grid;
+    gap: 12px;
+}
+
+.sidebar__nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 12px;
+    border-radius: 6px;
+    background: #f1f5f9;
+}
+
+.sidebar__nav a:hover {
+    background: #dce8ff;
+    color: #2563eb;
+}
+
+/* Основна частина */
+.main {
+    grid-area: main;
+    min-width: 0;
+}
+
+.main__title {
+    margin-bottom: 20px;
+    color: #243b64;
+}
+
+/* Сітка інформаційних блоків */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+}
+
+/* Картки */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #d1d5db;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #243b64;
+    margin-bottom: 15px;
+}
+
+.card__number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+/* Великий блок на 2 колонки */
+.card--featured {
+    grid-column: span 2;
+    background: #dce8ff;
+}
+
+/* Блок на 2 рядки */
+.card--tall {
+    grid-row: span 2;
+}
+
+/* Нижня частина */
+.footer {
+    grid-area: footer;
+    background: #243b64;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 180px 1fr;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивність для смартфонів */
+@media (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .card--featured {
+        grid-column: auto;
+    }
+
+    .card--tall {
+        grid-row: auto;
+    }
+}
